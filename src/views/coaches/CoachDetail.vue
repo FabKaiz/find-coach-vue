@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h2>test</h2>
+    <h2>Details for coach</h2>
+    <router-view></router-view>
+    <router-link to="/coaches/:id/contact">Contact</router-link>
   </div>
 </template>
 
