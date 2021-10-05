@@ -10,12 +10,6 @@
   </header>
 </template>
 
-<script>
-  export default {
-    
-  }
-</script>
-
 <style lang="scss" scoped>
 header {
   width: 100%;
@@ -57,8 +51,8 @@ header {
 a:active,
 a:hover,
 a.router-link-active {
-  border: 1px solid #9E88B2;
-  color: #9E88B2;
+  border: 1px solid #9e88b2;
+  color: #9e88b2;
 }
 
 h1 {
