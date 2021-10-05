@@ -18,6 +18,10 @@ body {
   margin: 0;
 }
 
+h2 {
+  font-size: 1.75rem;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -27,10 +27,10 @@ export default {
       return this.firstName + ' ' + this.lastName;
     },
     coachContactLink() {
-      return this.$route.path + '/coaches/' + this.id + '/contact';
+      return this.$route.path + '/' + this.id + '/contact';
     },
     coachDetailsLink() {
-      return this.$route.path + '/coaches/' + this.id;
+      return this.$route.path + '/' + this.id;
     },
   },
 };
@@ -42,6 +42,12 @@ li {
   border: 1px solid #42424256;
   border-radius: 4px;
   padding: 1rem;
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+  }
 }
 
 h3 {
