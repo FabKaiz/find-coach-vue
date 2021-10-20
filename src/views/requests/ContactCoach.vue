@@ -27,7 +27,7 @@ export default {
     };
   },
   methods: {
-    submitform() {
+    submitForm() {
       this.formIsValid = true;
       if (
         this.email === '' ||
@@ -37,6 +37,12 @@ export default {
         this.formIsValid = false;
         return;
       }
+      this.$store.dispatch('requests/contactCoach', {
+        email: this.email,
+        message: this.message,
+        coachId: this.$route.params.id,
+      });
+      this.$router.replace('/coaches');
     },
   },
 };
@@ -45,8 +51,6 @@ export default {
 <style lang="scss" scoped>
 form {
   margin: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 12px;
   padding: 1rem;
 }
 
