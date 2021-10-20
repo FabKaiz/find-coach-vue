@@ -8,6 +8,7 @@ import BaseCard from './components/UI/BaseCard';
 import BaseButton from './components/UI/BaseButton';
 import BaseBadge from './components/UI/BaseBadge';
 import BaseSpinner from './components/UI/BaseSpinner';
+import BaseDialog from './components/UI/BaseDialog';
 
 createApp(App)
   .use(store)
@@ -16,4 +17,5 @@ createApp(App)
   .component('base-button', BaseButton)
   .component('base-badge', BaseBadge)
   .component('base-spinner', BaseSpinner)
+  .component('base-dialog', BaseDialog)
   .mount('#app');
