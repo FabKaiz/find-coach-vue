@@ -1,5 +1,5 @@
 <template>
-  <base-card>
+  <div class="margin-bottom">
     <h2>Find Your Coach</h2>
     <span class="filter-option">
       <input type="checkbox" id="frontend" checked @change="setFilters" />
@@ -13,7 +13,7 @@
       <input type="checkbox" id="career" checked @change="setFilters" />
       <label for="career">Career</label>
     </span>
-  </base-card>
+  </div>
 </template>
 
 <script>
@@ -44,6 +44,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.margin-bottom {
+  margin-bottom: 40px;
+}
 h2 {
   margin: 0.5rem 0;
 }

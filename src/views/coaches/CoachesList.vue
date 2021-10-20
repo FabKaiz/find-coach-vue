@@ -6,11 +6,11 @@
   >
     <p>{{ error }}</p>
   </base-dialog>
-  <section>
-    <coach-filter @change-filter="setFilters"></coach-filter>
-  </section>
-  <section>
-    <base-card>
+  <div class="main">
+    <section>
+      <coach-filter @change-filter="setFilters"></coach-filter>
+    </section>
+    <section>
       <div class="controls">
         <base-button mode="outline" @click="loadCoaches(true)">
           Refresh
@@ -35,8 +35,8 @@
         ></coach-item>
       </ul>
       <h3 v-else>No coaches found.</h3>
-    </base-card>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -108,6 +108,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.main {
+  padding: 0 1rem;
+  margin: 2rem auto;
+  max-width: 40rem;
+}
+
 ul {
   list-style: none;
   margin: 0;
