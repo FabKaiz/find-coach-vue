@@ -15,7 +15,7 @@ export default {
       return 'mailto' + this.email;
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import RequestItem from "../../components/requests/RequestItem.vue"
+import RequestItem from '../../components/requests/RequestItem.vue';
 export default {
   components: {
     RequestItem,
@@ -29,9 +29,9 @@ export default {
     },
     hasRequests() {
       return this.$store.getters['requests/hasRequests'];
-    }
+    },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -41,5 +41,4 @@ ul {
   padding: 0;
   max-width: 30rem;
 }
-
 </style>
