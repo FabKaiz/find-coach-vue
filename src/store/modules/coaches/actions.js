@@ -1,6 +1,7 @@
 export default {
   async registerCoach(context, data) {
     const userId = context.rootGetters.userId;
+    console.log(userId);
     const coachData = {
       firstName: data.first,
       lastName: data.last,
@@ -21,7 +22,6 @@ export default {
     if (!response.ok) {
       // error
     }
-
     context.commit('registerCoach', {
       ...coachData,
       id: userId,
@@ -40,6 +40,7 @@ export default {
     const coaches = [];
     for (const key in responseData) {
       const coach = {
+        id: key,
         firstName: responseData[key].firstName,
         lastName: responseData[key].lastName,
         description: responseData[key].description,

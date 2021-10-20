@@ -2,7 +2,7 @@
   <base-dialog
     :show="!!error"
     title="An error has occurred"
-    @closed="handleError"
+    @close="handleError"
   >
     <p>{{ error }}</p>
   </base-dialog>
