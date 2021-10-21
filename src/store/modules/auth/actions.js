@@ -45,4 +45,11 @@ export default {
     const responseData = await response.json();
     afterFetch(response, responseData, context);
   },
+  logout(context) {
+    context.commit('setUser', {
+      token: null,
+      userId: null,
+      tokenExpiration: null,
+    });
+  },
 };
