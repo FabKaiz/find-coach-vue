@@ -91,6 +91,7 @@ dialog {
   margin: 0;
   overflow: hidden;
   background-color: white;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 
 header {
