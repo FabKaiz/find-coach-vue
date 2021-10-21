@@ -18,6 +18,13 @@ export default {
 </script>
 
 <style lang="scss">
+html,
+body,
+#app {
+  height: 100vh;
+  width: 100vw;
+}
+
 body {
   margin: 0;
 }

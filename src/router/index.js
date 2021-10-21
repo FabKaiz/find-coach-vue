@@ -6,6 +6,7 @@ import CoachesList from '../views/coaches/CoachesList';
 import CoachRegistration from '../views/coaches/CoachRegistration';
 import ContactCoach from '../views/requests/ContactCoach';
 import RequestsReceived from '../views/requests/RequestsReceived';
+import UserAuth from '../views/auth/UserAuth';
 import NotFound from '../views/NotFound';
 
 const routes = [
@@ -19,6 +20,7 @@ const routes = [
   },
   { path: '/register', component: CoachRegistration },
   { path: '/requests', component: RequestsReceived },
+  { path: '/auth', component: UserAuth },
   { path: '/:notFound(.*)', component: NotFound },
 ];
 
