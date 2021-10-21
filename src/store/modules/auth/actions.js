@@ -1,14 +1,11 @@
 const apiKey = process.env.VUE_APP_FIREBASE;
 
-const afterFetch = (response, context) => {
-  const responseData = response.json();
-
+const afterFetch = (response, responseData, context) => {
   if (!response.ok) {
     console.log(responseData);
     const error = new Error(responseData.message || 'Failed to authenticate.');
     throw error;
   }
-
   context.commit('setUser', {
     token: responseData.idToken,
     userId: responseData.localId,
@@ -29,7 +26,8 @@ export default {
         }),
       }
     );
-    afterFetch(response, context);
+    const responseData = await response.json();
+    afterFetch(response, responseData, context);
   },
 
   async signup(context, payload) {
@@ -44,6 +42,7 @@ export default {
         }),
       }
     );
-    afterFetch(response, context);
+    const responseData = await response.json();
+    afterFetch(response, responseData, context);
   },
 };
