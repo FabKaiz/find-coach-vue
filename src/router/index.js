@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import store from '../store/index'
+import store from '../store/index';
 
 // Pages
 import CoachDetail from '../views/coaches/CoachDetail';
@@ -41,11 +41,9 @@ const router = createRouter({
 router.beforeEach((to, _, next) => {
   if (to.meta.requiresAuth && !store.getters.isAuthenticated) {
     next('/auth');
-  } else if (to.meta.requiresUnauth && !store.getters.isAuthenticated) {
+  } else if (to.meta.requiresUnauth && store.getters.isAuthenticated) {
     next('/coaches');
-  } else {
-    next();
-  }
+  } else next();
 });
 
 export default router;
