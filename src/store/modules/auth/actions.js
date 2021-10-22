@@ -1,5 +1,6 @@
 const apiKey = process.env.VUE_APP_FIREBASE;
 let timer;
+console.log(apiKey);
 
 export default {
   async login(context, payload) {
