@@ -1,16 +1,18 @@
-import { createApp } from 'vue';
+import { createApp, defineAsyncComponent } from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import dotenv from 'dotenv';
-dotenv.config();
 
-//Base components
+// Base components
 import BaseCard from './components/UI/BaseCard';
 import BaseButton from './components/UI/BaseButton';
 import BaseBadge from './components/UI/BaseBadge';
 import BaseSpinner from './components/UI/BaseSpinner';
-import BaseDialog from './components/UI/BaseDialog';
+
+// Optimisation, async components
+const BaseDialog = defineAsyncComponent(() =>
+  import('./components/UI/BaseDialog')
+);
 
 createApp(App)
   .use(store)

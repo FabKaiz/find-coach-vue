@@ -1,14 +1,17 @@
+/* eslint-disable prettier/prettier */
 import { createRouter, createWebHistory } from 'vue-router';
 import store from '../store/index';
 
 // Pages
-import CoachDetail from '../views/coaches/CoachDetail';
 import CoachesList from '../views/coaches/CoachesList';
-import CoachRegistration from '../views/coaches/CoachRegistration';
-import ContactCoach from '../views/requests/ContactCoach';
-import RequestsReceived from '../views/requests/RequestsReceived';
-import UserAuth from '../views/auth/UserAuth';
-import NotFound from '../views/NotFound';
+
+// Optimisation, async components
+const CoachDetail       = () => import('../views/coaches/CoachDetail');
+const CoachRegistration = () => import('../views/coaches/CoachRegistration');
+const ContactCoach      = () => import('../views/requests/ContactCoach');
+const UserAuth          = () => import('../views/auth/UserAuth');
+const RequestsReceived  = () => import('../views/requests/RequestsReceived');
+const NotFound          = () => import('../views/NotFound');
 
 const routes = [
   { path: '/', redirect: '/coaches' },
